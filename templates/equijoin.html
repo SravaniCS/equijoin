@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Equi-Joins</h1>
+        <table border="3px">
+            <tr>
+                <th>Empno</th>
+                <th>Ename</th>
+                <th>Job</th>
+                <th>MGR</th>
+                <th>Hiredate</th>
+                <th>Sal</th>
+                <th>Comm</th>
+                <th>Deptno</th>
+                <th>Dname</th>
+                <th>Dloc</th>
+            </tr>
+
+            {% for emp in EMPObjects %}
+                <tr>
+                    <td>{{emp.empno}}</td>
+                    <td>{{emp.ename}}</td>
+                    <td>{{emp.job}}</td>
+                    <td>{{emp.mgr}}</td>
+                    <td>{{emp.hiredate}}</td>
+                    <td>{{emp.sal}}</td>
+                    <td>{{emp.comm}}</td>
+                    <td>{{emp.deptno.deptno}}</td>
+                    <td>{{emp.deptno.dname}}</td>
+                    <td>{{emp.deptno.dloc}}</td>
+                </tr>
+            {% endfor %}
+
+        </table>
+    </center> 
+</body>
+</html>
